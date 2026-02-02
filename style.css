@@ -1,0 +1,49 @@
+
+/*Primary Colours*/
+
+:root {
+  --wine: #670000;
+  --pink: #FF4385;
+  --kaki: #587C42;
+  --off-white: #FDDADB;
+}
+
+body{
+    background-color: var(--off-white);
+}
+
+
+#start-button{
+  background-color:var(--pink);
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: bold
+
+}
+
+#theme-button{
+  background-color:var(--wine);
+  color: var(--kaki);
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: bold;
+    margin-left: 1400px
+}
+
+
+#game-board{
+    background-color: var(--kaki);
+  margin-top: 100px;
+  margin-left: 600px
+}
+
+#reset-button{
+  background-color:var(--pink);
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 800px;
+  margin-left: 1400px;
+
+}
+
