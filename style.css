@@ -27,15 +27,11 @@ body{
   border-radius: 20px;
   font-size: 30px;
   font-weight: bold;
-    margin-left: 1400px
+  float: right -20px;
+
 }
 
 
-#game-board{
-    background-color: var(--kaki);
-  margin-top: 100px;
-  margin-left: 600px
-}
 
 #reset-button{
   background-color:var(--pink);
@@ -43,7 +39,6 @@ body{
   font-size: 30px;
   font-weight: bold;
   margin-top: 800px;
-  margin-left: 1400px;
-
+  margin-left: 1400px
 }
 
