@@ -1,6 +1,3 @@
-
-/*Primary Colours*/
-
 :root {
   --wine: #670000;
   --pink: #FF4385;
@@ -9,36 +6,55 @@
 }
 
 body{
-    background-color: var(--off-white);
-}
 
-
-#start-button{
-  background-color:var(--pink);
-  border-radius: 20px;
-  font-size: 30px;
-  font-weight: bold
+  background-color: var(--off-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
-#theme-button{
-  background-color:var(--wine);
-  color: var(--kaki);
-  border-radius: 20px;
-  font-size: 30px;
+button {
+  border: none;
+  padding: 12px 24px;
   font-weight: bold;
-  float: right -20px;
+  cursor: pointer;
+}
 
+#start-button{ 
+    background-color:var(--pink); 
+    border-radius: 20px; 
+    font-size: 30px; 
+    font-weight: bold 
 }
 
 
-
-#reset-button{
-  background-color:var(--pink);
-  border-radius: 20px;
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 800px;
-  margin-left: 1400px
+#theme-button{ 
+    background-color:var(--wine); 
+    color: var(--kaki); 
+    border-radius: 20px; 
+    font-size: 30px; 
+    font-weight: bold; 
+    float: left;     
+    margin-left: 800px;
 }
 
+#reset-button{ 
+    background-color:var(--pink); 
+    border-radius: 20px; 
+    font-size: 30px; 
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+#game-board {
+  background-color: var(--kaki);
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  padding: 150px;
+  gap: 10px;
+  border-radius: 50px;
+
+}
