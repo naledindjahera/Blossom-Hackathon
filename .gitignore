@@ -1,0 +1,14 @@
+# Ignore macOS and system files
+.DS_Store
+Thumbs.db
+*.log
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore OneDrive temp files
+~$*
+
+# Ignore Python cache if any
+__pycache__/
+*.pyc
