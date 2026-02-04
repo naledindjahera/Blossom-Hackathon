@@ -1,60 +1,217 @@
-:root {
-  --wine: #670000;
-  --pink: #FF4385;
-  --kaki: #587C42;
-  --off-white: #FDDADB;
+/*Pink*/
+:root{
+  --bg: #FDDADB;
+  --panel: #FF4385;
+  --board-border: #587C42;
+  --cell-hover: #FF4385;
+  --accent: #FF4385;
+  --accent-2: #08D9D6;
+  --accent-3: #811313;
+  --text: #000000;
+}
+
+/*Dark*/
+.theme-dark{
+  --bg: #252A34;
+  --panel: #1f232b;
+  --board-border: #000000;
+  --cell-hover: #FF4385;
+  --accent: #FF4385;
+  --accent-2: #03DAC6;
+    --accent-3: #670000;
+  --text: #ffffff;
+}
+
+/*White*/
+.theme-white{
+  --bg: #F5F5F5;
+  --panel: #FF4385;
+  --board-border: #000000;
+  --cell-hover: #DDDDDD; 
+  --accent: #FF4385;
+  --accent-2: #08D9D6;
+  --text: #000000;
+}
+
+/*orange*/
+.theme-orange{
+  --bg: #FFF3E0;
+  --panel: #FF9800;
+  --board-border: #E65100;
+  --cell-hover: #FFB74D;
+  --accent: #FB8C00;
+  --accent-2: #FFE0B2;
+  --text: #000000;
+}
+
+/*blue*/
+.theme-blue{
+  --bg: #E3F2FD;
+  --panel: #1565C0;
+  --board-border: #0D47A1;
+  --cell-hover: #64B5F6;
+  --accent: #2196F3;
+  --accent-2: #90CAF9;
+  --text: #000000;
+}
+
+
+*{
+  font-family: sans-serif;
+  transition: 0.2s ease-in-out;
+  user-select: none;
+}
+
+
+
+.align{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body{
-
-  background-color: var(--off-white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  background-color: var(--bg);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  text-align: center;
+  padding-top: 5vh;
 }
 
-button {
-  border: none;
-  padding: 12px 24px;
-  font-weight: bold;
+.mode-selector {
+  margin-bottom: 20px;
+}
+
+.mode-selector button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
   cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-3);
 }
 
-#start-button{ 
-    background-color:var(--pink); 
-    border-radius: 20px; 
-    font-size: 30px; 
-    font-weight: bold 
-}
-
-
-#theme-button{ 
-    background-color:var(--wine); 
-    color: var(--kaki); 
-    border-radius: 20px; 
-    font-size: 30px; 
-    font-weight: bold; 
-    float: left;     
-    margin-left: 800px;
-}
-
-#reset-button{ 
-    background-color:var(--pink); 
-    border-radius: 20px; 
-    font-size: 30px; 
-    font-weight: bold;
-    margin-top: 20px;
+.mode-selector button.active {
+  background-color: var(--accent-2);
+  color: #000;
 }
 
 
-#game-board {
-  background-color: var(--kaki);
+.turn-container{
+  width: 170px;
+  height: 80px;
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 80px);
-  grid-template-rows: repeat(3, 80px);
-  padding: 150px;
-  gap: 10px;
-  border-radius: 50px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+position: relative;
+}
 
+.turn-container h3{
+  margin: 0;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.turn-container .turn-box{
+  border: 3px solid #000;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.turn-container .turn-box:nth-child(even){
+  border-right: none;
+
+}
+.bg{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 85px;
+  height: 40px;
+  background-color: var(--accent);
+  z-index: -1;
+
+
+}
+
+.main-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 250px;
+  width: 250px;
+  color: var(--text);
+  margin: 30px auto;
+  border: 20px solid var(--board-border);
+  border-radius: 20px;
+}
+
+.box{
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--text);
+  font-weight: 700;
+  border: 5px solid var(--board-border);
+  
+}
+.box:hover{
+  background-color:var(--cell-hover);
+
+}
+#play-again{
+  background-color:var(--accent);
+  padding: 10px 25px;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+
+}
+#play-again:hover{
+  padding: 10px 40px;
+  background-color: var(--accent);
+  color: #000;
+
+}
+
+#theme-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--accent);
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.score-panel {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: var(--accent);
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.score-panel h4 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.score-panel p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.score-panel span {
+  font-weight: bold;
+  font-size: 1.1rem;
 }

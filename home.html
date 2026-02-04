@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic Tac Toe 2.0</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+  margin:0;
+  height:69pc;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(#ff4d6d,#ff85a2,#845ec2);
+  animation: gradientBG 10s ease infinite;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+#Opening{
+  text-align:center;
+  background: rgba(0,0,0,0.5);
+  padding:50px;
+  border-radius:25px;
+  box-shadow:0 0 40px rgba(0,0,0,0.6);
+  animation: popIn 1s ease;
+}
+
+
+
+h1{
+  color:white;
+  font-size:3rem;
+  margin-bottom:30px;
+  text-shadow:0 0 15px hotpink;
+}
+
+#start-btn{
+  padding:18px 70px;
+  font-size:1.5rem;
+  border:none;
+  border-radius:50px;
+  background: linear-gradient(#ff4d6d,#ff85a2,#845ec2);
+  cursor:pointer;
+  box-shadow:0 0 20px hotpink;
+  transition:0.3s ease;
+}
+
+#start-btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 35px hotpink;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="Opening">
+
+<h1>Welcome to Tic-Tac-Toe 2.0</h1>
+
+<button id="start-btn"
+ onclick="window.location.href='index.html'">
+ Start Game
+</button>
+
+</div>
+
+</body>
+</html>

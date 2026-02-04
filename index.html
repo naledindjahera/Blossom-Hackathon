@@ -7,38 +7,46 @@
 </head>
 <body>
 
-<button id="start-button">
-    Start Game
-</button>
-
-<button id="theme-button">
-    Change Theme
-</button>
-
-
-<section id="game-board">  
-    <div class="grid">
-        <div class="cell"> </div>
-        <div class="cell"> </div>
-        <div class="cell"></div>
-
-        <div class="cell"> </div>
-        <div class="cell"></div>
-        <div class="cell"> </div>
-
-        <div class="cell"> </div>
-        <div class="cell"> </div>
-        <div class="cell"> </div>
-    </div>
-
-</section>
-
-<button id="reset-button">
-    Reset Game
-</button>
+    <div class="mode-selector">
+    <button id="theme-button">Change Theme</button>
+    <button id="one-player">1 Player</button>
+    <button id="two-player">2 Players</button>
+</div>
 
 
 
+<div class="turn-container">
+    <h3>Turn For</h3>
+    <div class="turn-box align">X</div>
+    <div class="turn-text align">O</div>
+    <div class="bg"></div>
+</div>
+
+
+<div class="main-grid">
+    <div class="box align"></div>
+     <div class="box align"></div>
+      <div class="box align"></div>
+       <div class="box align"></div>
+        <div class="box align"></div>
+         <div class="box align"></div>
+          <div class="box align"></div>
+           <div class="box align"></div>
+            <div class="box align"></div>
+             </div>
+             <h2 id="results"></h2>
+             <button id="play-again">Play Again</button>
+
+
+<div class="score-panel">
+    <h4>SCORE</h4>
+    <p>X: <span id="score-x">0</span></p>
+    <p>O: <span id="score-o">0</span></p>
+</div>
+
+
+
+<script src="script.js"></script>
     
 </body>
 </html>
