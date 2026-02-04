@@ -9,28 +9,35 @@
 
 <style>
 
-body{
-  margin:0;
-  height:69pc;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background: linear-gradient(#ff4d6d,#ff85a2,#845ec2);
-  animation: gradientBG 10s ease infinite;
-  font-family: 'Poppins', sans-serif;
+
+.align{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+body
+{
+  background:#e2a9f1;
 
+
+}
 #Opening{
+  position: relative; 
   text-align:center;
-  background: rgba(0,0,0,0.5);
-  padding:50px;
+  background:#e2a9f1;
+  padding:90px;
   border-radius:25px;
-  box-shadow:0 0 40px rgba(0,0,0,0.6);
   animation: popIn 1s ease;
 }
 
+img{
 
+  width:1000px;
+  display:block;
+  margin:auto;
+
+}
 
 h1{
   color:white;
@@ -40,6 +47,10 @@ h1{
 }
 
 #start-btn{
+  position:absolute;
+  top:80%;
+  left:50%;
+  transform:translate(-50%, -50%);
   padding:18px 70px;
   font-size:1.5rem;
   border:none;
@@ -50,10 +61,6 @@ h1{
   transition:0.3s ease;
 }
 
-#start-btn:hover{
-  transform:scale(1.1);
-  box-shadow:0 0 35px hotpink;
-}
 
 </style>
 </head>
@@ -62,7 +69,7 @@ h1{
 
 <div id="Opening">
 
-<h1>Welcome to Tic-Tac-Toe 2.0</h1>
+  <img src="image.png" alt=" homepage">
 
 <button id="start-btn"
  onclick="window.location.href='index.html'">
